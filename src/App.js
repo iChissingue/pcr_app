@@ -6,20 +6,20 @@ import {
 
 
 import Home from './Pages/Home.js'
+import TemplateDefault from './Template/Default.js'
 
 
 const App = () => {
   return (
-    <>
-    
-    <Router>
-      <Routes>
+    <TemplateDefault>
+      <Router>
+        <Routes>
 
-        <Route path='/home' element={<Home/>}/>
-  
-      </Routes>  
-    </Router>
-    </>
+          <Route path='/home' element={<Home/>}/>
+    
+        </Routes>  
+      </Router>
+    </TemplateDefault>
   );
 }
 
