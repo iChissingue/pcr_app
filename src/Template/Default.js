@@ -11,7 +11,7 @@ const Default = ({children}) =>{
 return (
     <>
         <Header/>
-        <Container sx={ 'margin: 10px 100px'}>
+        <Container sx={ 'margin: 80px 100px'}>
             {children}
         </Container>
     </>
