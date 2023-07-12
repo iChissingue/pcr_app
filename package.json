@@ -28,7 +28,8 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "eslint.options": {"setting": true}
   },
   "browserslist": {
     "production": [
