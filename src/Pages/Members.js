@@ -11,8 +11,7 @@ const Members = () =>{
     useEffect(()=> {
         Axios.get('http://localhost:2020/members')
             .then((members) => {
-                const { data } =members
-                console.log(data)
+                const { data } = members
 
                 setMembers(data)
             })
