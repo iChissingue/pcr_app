@@ -10,10 +10,16 @@ const Members = () =>{
 
     useEffect(()=> {
         Axios.get('http://localhost:2020/members')
-            .then((members) => {
-                const { data } = members
+            .then((response) => {
+                if(response.status === 200){
+                    const { data } = response
 
-                setMembers(data)
+                    setMembers(data)
+                }else{
+                    const { error } = response
+                    setMembers(error)
+                }
+                
             })
     }, [])
 

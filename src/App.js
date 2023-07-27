@@ -11,16 +11,18 @@ import TemplateDefault from './Template/Default.js'
 
 const App = () => {
   return (
-    <TemplateDefault>
-      <Router>
-        <Routes>
-
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/members' element={<Members/>}/>
     
-        </Routes>  
+      <Router>
+        <TemplateDefault>
+          <Routes>
+
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/members' element={<Members/>}/>
+      
+          </Routes>  
+        </TemplateDefault>
       </Router>
-    </TemplateDefault>
+    
   );
 }
 
