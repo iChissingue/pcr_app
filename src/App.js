@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 
 import Members from './Pages/Members.js'
+import MemberProfile from './Pages/MemberProfile.js'
 import Home from './Pages/Home.js'
 import TemplateDefault from './Template/Default.js'
 
@@ -17,6 +18,7 @@ const App = () => {
           <Routes>
 
             <Route path='/home' element={<Home/>}/>
+            <Route path='/memberprofile/*' element={<MemberProfile/>}/>
             <Route path='/members' element={<Members/>}/>
       
           </Routes>  

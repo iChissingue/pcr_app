@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { React, useState, useEffect } from 'react'
 import Axios from 'axios'
 import MemberCard from '../Components/MemberCard'
 import { Grid } from '@mui/material'
@@ -16,8 +16,8 @@ const Members = () =>{
 
                     setMembers(data)
                 }else{
-                    const { error } = response
-                    setMembers(error)
+                    
+                    React.alert(response.data)
                 }
                 
             })
@@ -35,6 +35,7 @@ const Members = () =>{
                     members.map(item => (
                     <Grid item xs={12} md={3}>    
                         <MemberCard 
+                            id={item.id}
                             name={item.name}
                             admissionDate={item.admissionDate}
                             age={item.age}

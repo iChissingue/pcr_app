@@ -7,8 +7,7 @@ import {
         Avatar,
         IconButton,
     } from '@mui/material'
-
-    import { useNavigate } from 'react-router-dom'
+    
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ShareIcon from '@mui/icons-material/Share'
 
@@ -16,17 +15,12 @@ import ShareIcon from '@mui/icons-material/Share'
 
 
 
+const MemberProfile = ({name, age, sex, inheritant, admissionDate, contact, adress}) => {
+    
 
-const MemberCard = ({ id, name, age, sex, inheritant, admissionDate, contact, adress}) => {
-const navigate = useNavigate() 
-
-const handleMemberCardClick = () => {
-  navigate(`/memberprofile/${id}`)
- 
-}
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardHeader 
+      <CardHeader
         avatar={
           <Avatar sx={ 'backgroundColor: primary' } aria-label="recipe">
             I
@@ -34,7 +28,7 @@ const handleMemberCardClick = () => {
         }
        
         title= { name }
-        subheader={ `Admitido em: ${admissionDate}`} onClick={()=> handleMemberCardClick()}
+        subheader={ `Admitido em: ${admissionDate}`}
       />
       <CardMedia
         component="img"
@@ -55,4 +49,4 @@ const handleMemberCardClick = () => {
   );
 }
 
-export default MemberCard
+export default MemberProfile

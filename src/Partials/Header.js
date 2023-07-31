@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { 
     AppBar,
     Box,
@@ -63,7 +63,7 @@ const Header = () =>{
         </Toolbar>
       </AppBar>
      <Drawer open={menuOpen} onClose={() => handleToggleMenu()}>
-        <List fontSize= '10'>
+        <List>
           <ListItem button onClick={() => handleHomeChick()}>
             <ListItemIcon><HomeIcon color='primary'/></ListItemIcon>
             <ListItemText>Home</ListItemText>
